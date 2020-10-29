@@ -1,0 +1,33 @@
+{% extends "main/base.html" %}
+{% block content %}
+<div class="container pt-10 text-center">
+    <div class="card card pt-10 bg-secondary border-success">
+        <form action="#" method="post">
+            {% csrf_token %}
+            <div class="form-group p-2">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Username is CaSe SeNsItIvE">
+            </div>
+            <div class="form-group p-2">
+                <label>Full Name</label>
+                <input type="text" name="fullname" class="form-control" placeholder="eg. John Doe">
+            </div>
+            <div class="form-group p-2">
+                <label>Email</label>
+                <input type="text" name="email" class="form-control" placeholder="eg. abc@xyz.com">
+            </div>
+            <div class="form-group p-2">
+                <label>Password</label>
+                <input type="password" name="password1" class="form-control" placeholder="Enter password">
+            </div>
+            <div class="form-group p-2">
+                <label>Confirm Password</label>
+                <input type="password" name="password2" class="form-control" placeholder="Enter password again">
+            </div>
+            <div class="form-group">
+                <input type="button" value="Submit" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
